@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Católicos en Carmen</title>
+    <link rel="icon" href="main/images/icono.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main/style.css">
+</head>
+<body>
+
+<!-- Navbar Principal -->
+<nav class="navbar navbar-expand-lg navbar-principal sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="main/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Donativos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Segundo Navbar -->
+<nav class="navbar-liturgico sticky-top">
+    <div class="container">
+        <div class="liturgico-info">
+            <span><i class="far fa-calendar-alt me-2"></i> <span id="fecha-actual"></span></span>
+            <span><i class="fas fa-bible me-2"></i> Ciclo Litúrgico: <strong id="ciclo-liturgico">A</strong></span>
+            <span>
+                <i class="fas fa-church me-2"></i> Tiempo Litúrgico: 
+                <strong id="tiempo-liturgico">Cuaresma</strong>
+                <span class="circulo-liturgico" id="circulo-tiempo" style="background-color: #9b59b6;"></span>
+            </span>
+        </div>
+    </div>
+</nav>
+
+<!-- Noticia Principal -->
+<section id="inicio" class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <span class="badge">NOTICIA DESTACADA</span>
+            <h1>Bienvenido Monseñor</h1>
+            <p>La Nunciatura Apostólica informa que el papa León XIV ha nombrado un nuevo obispo para la Diócesis de Campeche.</p>
+            <a href="noticia/noti_001.html" class="btn btn-outline-light btn-lg"><strong>Leer más</strong></a>
+        </div>
+    </div>
+</section>
+
+<!-- Artículos Formativos -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Artículos Formativos</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="main/images/art_001.jpeg" class="card-img-top" alt="Artículo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Es correcto aplaudir en misa?<br>Esto dijó Benedicto XVI</h5>
+                        <p class="card-text"> Parece un gesto natural, pero el Papa Benedicto nos ofrece una respuesta clara sobre sus efectos en la liturgia.</p>
+                        <a href="#" class="btn btn-link"><i class="fas fa-book ms-1"></i> Seguir leyendo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="main/images/art_002.webp" class="card-img-top" alt="Artículo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Marzo<br>El mes dedicado a San José</h5>
+                        <p class="card-text">Un santo que nos enseña a vivir en el silencio, la humildad y la obediencia a Dios, con una fe firme.</p>
+                        <a href="#" class="btn btn-link"><i class="fas fa-book ms-1"></i> Seguir leyendo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="main/images/art_003.avif" class="card-img-top" alt="Artículo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Semana Santa 2026<br>¿Estás listo?</h5>
+                        <p class="card-text">Días santos para recordar el amor de Cristo en la cruz y renovar nuestra fe con oración, reflexión y conversión.</p>
+                        <a href="#" class="btn btn-link"><i class="fas fa-book ms-1"></i> Seguir leyendo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+    <a href="#" class="btn-articulos">
+        <i class="fas fa-newspaper me-2"></i> Ver más artículos
+    </a>
+</div>
+    </div>
+</section>
+
+<!-- Actividades y Comunicados-->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">Actividades y Comunicados</h2>
+        <div class="row g-4">
+            <div class="col-lg-7 mx-auto">
+                <div class="calendario-item">
+                    <div class="calendario-fecha">
+                        <span class="dia">17</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="calendario-info">
+                        <h4>Confesiones Decanatales</h4>
+                        <p>Parroquia del Espíritu Santo - 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="calendario-item">
+                    <div class="calendario-fecha">
+                        <span class="dia">18</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="calendario-info">
+                        <h4>Confesiones Decanatales</h4>
+                        <p>Parroquia de San Juan Pablo ll - 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="calendario-item">
+                    <div class="calendario-fecha">
+                        <span class="dia">19</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="calendario-info">
+                        <h4>Confesiones Decanatales</h4>
+                        <p>Parroquia de Nuestra Señora del Rosario - 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="calendario-item">
+                    <div class="calendario-fecha">
+                        <span class="dia">20</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="calendario-info">
+                        <h4>Confesiones Decanatales</h4>
+                        <p>Parroquia del Señor de la Misericordia - 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="calendario-item">
+                    <div class="calendario-fecha">
+                        <span class="dia">21</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="calendario-info">
+                        <h4>Confesiones Decanatales</h4>
+                        <p>Parroquia de San Nicolas - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen -->
+            <div class="col-lg-5 text-center">
+                <img src="main/images/comunicado.jpg" alt="Cartel de actividades" class="img-fluid calendario-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Retiros y Encuentros -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Retiros y Encuentros</h2>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Cartel 1 -->
+            <div class="col-md-4">
+                <div class="cartel-img-card">
+                    <img src="main/images/flyer_1.jpg" alt="Flyer 1">
+                    <div class="cartel-contacto">
+                        <a href="https://www.facebook.com/photo/?fbid=1462578078839715&set=a.453020766462123&locale=es_LA" class="btn" target="_blank" rel="noopener noreferrer">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartel 2 -->
+            <div class="col-md-4">
+                <div class="cartel-img-card">
+                    <img src="main/images/flyer_2.jpg" alt="Flyer 2">
+                    <div class="cartel-contacto">
+                        <a href="https://www.facebook.com/photo?fbid=929511002759424&set=a.236397175404147&locale=es_LA" class="btn" target="_blank" rel="noopener noreferrer">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartel 3 -->
+            <div class="col-md-4">
+                <div class="cartel-img-card">
+                    <img src="main/images/flyer_3.jpg" alt="Flayer 3">
+                    <div class="cartel-contacto">
+                        <a href="https://www.facebook.com/photo/?fbid=1346087164211807&set=pb.100064316094071.-2207520000&locale=es_LA" class="btn" target="_blank" rel="noopener noreferrer">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartel 4 -->
+            <div class="col-md-4">
+                <div class="cartel-img-card">
+                    <img src="main/images/flyer_4.jpg" alt="Flayer 4">
+                    <div class="cartel-contacto">
+                        <a href="https://www.facebook.com/photo/?fbid=1238136631839891&set=a.492877359699159&locale=es_LA" class="btn" target="_blank" rel="noopener noreferrer">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parroquias -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">Parroquias de la Ciudad</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de Nuestra Señora de Fátima</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Santuario de Nuestra Señora del Carmen</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de Nuestra Señora de la Asunción</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de Nuestra Señora del Rosario</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de la Divina Providencia</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia del Señor de la Misericordia</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia del Espíritu Santo</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de San Juan Diego</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de San Juan Pablo II</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de San Nicolás de Bari</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Parroquia de Santo Niño de Atocha</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="parroquia-card">
+                    <div class="parroquia-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4>Rectoria de San José del Mar</h4>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Videos para Escuchar</h2>
+        <div class="row g-4">
+            <!-- Video 1 -->
+            <div class="col-lg-6">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K6rfwKCP3-o?si=E4OMIp_pW8oamLFN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="text-center mt-3">Hay conflictos y tensiones que ponen en riesgo la vida y la convivencia entre los pueblos, y que pueden extenderse durante años si no se elige el camino del diálogo y la reconciliación. </p>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="col-lg-6">
+                <div class="video-container">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FICMnoticias%2Fvideos%2F758157607153399%2F&show_text=false&width=560&t=60" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                </div>
+                <p class="text-center mt-3">El Pbro. Daniel Noz comparte el tema “Desierto y Corazón”, una reflexión para preparar el corazón en la recta final de la Cuaresma. (Recuperado de <strong><a href="https://www.facebook.com/ICMnoticias?locale=es_LA" target="_blank" rel="noopener noreferrer" class="link-icm">ICM Campeche</a></strong>)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recursos Descargables -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">Recursos Descargables</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="biblioteca/biblio.html" class="recurso-link">
+                    <div class="recurso-card">
+                        <div class="recurso-icon">
+                            <i class="fas fa-book-bible"></i>
+                        </div>
+                        <h4>Libros Espirituales</h4>
+                        <p>Accede a nuestra biblioteca de libros en PDF</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="recurso-link">
+                    <div class="recurso-card">
+                        <div class="recurso-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h4>Reflexiones Diarias</h4>
+                        <p>Descarga las reflexiones del mes</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="biblioteca.html?categoria=cancioneros" class="recurso-link">
+                    <div class="recurso-card">
+                        <div class="recurso-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>Cancioneros</h4>
+                        <p>Cantos para la liturgia en formato PDF</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Widget Vatican News -->
+<section class="section-padding vatican-news-widget">
+    <div class="container">
+        <h2 class="section-title">Noticias del Vaticano</h2>
+        <div class="vatican-news-container">
+            <vaticannews-widget lang="es" fontSize="18" carouselVideoAuto="true" carouselVideoTime="fast"></vaticannews-widget>
+        </div>
+    </div>
+</section>
+<script src="https://www.vaticannews.va/widget.js"></script>
+
+<!-- Canales Oficiales -->
+<section class="section-padding canales-oficiales">
+    <div class="container">
+        <h2 class="section-title">Sitios Oficiales</h2>
+        <div class="carrusel-logos">
+            <div class="carrusel-track">
+                <!-- Primera copia de logos -->
+                <a href="https://cem.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_cem.png" alt="CEM" class="logo-img">
+                </a>
+                <a href="https://arquidiocesismexico.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_arqui_primada_mexico.png" alt="Arqui_Primada_MX" class="logo-img">
+                </a>
+                <a href="https://www.vatican.va/content/vatican/es.html" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_santa_sede.png" alt="Santa_Sede" class="logo-img">
+                </a>
+                <a href="https://www.ewtn.com/es" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_ewtn.png" alt="EWTN" class="logo-img">
+                </a>
+                <a href="https://celam.org/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_celam.png" alt="CELAM" class="logo-img">
+                </a>
+                <a href="https://es.zenit.org/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_zenit.png" alt="Zenit" class="logo-img">
+                </a>
+                <a href="https://www.buenaprensa.com/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_buena_prensa.png" alt="Buena Prensa" class="logo-img">
+                </a>
+                <a href="https://arquidiocesisdeyucatan.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_arqui_yuc.png" alt="Arqui_Yucatan" class="logo-img">
+                </a>
+                
+                <!-- Segunda copia de logos (para el loop infinito) -->
+                <a href="https://cem.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_cem.png" alt="CEM" class="logo-img">
+                </a>
+                <a href="https://arquidiocesismexico.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_arqui_primada_mexico.png" alt="Arqui_Primada_MX" class="logo-img">
+                </a>
+                <a href="https://www.vatican.va/content/vatican/es.html" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_santa_sede.png" alt="Santa_Sede" class="logo-img">
+                </a>
+                <a href="https://www.ewtn.com/es" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_ewtn.png" alt="EWTN" class="logo-img">
+                </a>
+                <a href="https://celam.org/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_celam.png" alt="CELAM" class="logo-img">
+                </a>
+                <a href="https://es.zenit.org/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_zenit.png" alt="Zenit" class="logo-img">
+                </a>
+                <a href="https://www.buenaprensa.com/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_buena_prensa.png" alt="Buena Prensa" class="logo-img">
+                </a>
+                <a href="https://arquidiocesisdeyucatan.org.mx/" target="_blank" rel="noopener noreferrer" class="logo-link">
+                    <img src="main/images/CO_arqui_yuc.png" alt="Arqui_Yucatan" class="logo-img">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <h5>Católicos en Carmen</h5>
+                <p>
+                    Un sitio para compartir con ustedes todo lo relacionado con la iglesia en nuestra ciudad.
+                </p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Donativos</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Contacto</h5>
+                <ul class="list-unstyled footer-contacto">
+                    <li><i class="fas fa-map-marker-alt me-2"></i>Cd. del Carmen, Campeche</li>
+                    <li><i class="fas fa-phone me-2"></i>938-181-4511</li>
+                    <li><i class="fas fa-envelope me-2"></i>cecarmen@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h5>Síguenos</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="sobre-nosotros" style="scroll-margin-top: 100px;"></div>
+<div id="contacto" style="scroll-margin-top: 100px;"></div>
+<div id="donativos" style="scroll-margin-top: 100px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main/script.js"></script>
+
+</body>
+</html>

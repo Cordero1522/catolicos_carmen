@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital · Católicos en Carmen</title>
+    <link rel="icon" href="/main/images/icono.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="biblio.css">
+</head>
+<body>
+
+<!-- Navbar Principal -->
+<nav class="navbar navbar-expand-lg navbar-principal sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/main/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#sobre-nosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contacto">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#donativos">Donativos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Segundo Navbar - Información Litúrgica -->
+<nav class="navbar-liturgico sticky-top">
+    <div class="container">
+        <div class="liturgico-info">
+            <span><i class="far fa-calendar-alt me-2"></i> <span id="fecha-actual"></span></span>
+            <span><i class="fas fa-bible me-2"></i> Ciclo Litúrgico: <strong id="ciclo-liturgico">A</strong></span>
+            <span>
+                <i class="fas fa-church me-2"></i> Tiempo Litúrgico: 
+                <strong id="tiempo-liturgico">Cuaresma</strong>
+                <span class="circulo-liturgico" id="circulo-tiempo" style="background-color: #9b59b6;"></span>
+            </span>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL: BIBLIOTECA DIGITAL -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Biblioteca Digital</h2>
+        <p class="text-center mb-5" style="color: var(--color-texto-gris); max-width: 700px; margin-left: auto; margin-right: auto;">
+            Documentos, libros, reflexiones y catequesis en formato PDF para profundizar en la fe.
+        </p>
+
+        <!-- Filtros y buscador -->
+        <div class="biblioteca-header">
+            <div class="filtro-categoria">
+                <span class="badge-categoria activo">Todos</span>
+                <span class="badge-categoria">Libros</span>
+                <span class="badge-categoria">Catequesis</span>
+                <span class="badge-categoria">Reflexiones</span>
+                <span class="badge-categoria">Documentos</span>
+                <span class="badge-categoria">Catecismo</span>
+            </div>
+            <div class="buscador-pdf">
+                <input type="text" placeholder="Buscar documento...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <!-- GRID DE PDFS -->
+        <div class="row g-4 mt-2">
+            <!-- PDF 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="portadas/book_001.jpg" alt="Portada 1" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">El Espíritu de la Liturgia Una Introducción</div>
+                        <a href="/biblioteca/pdf/El Espíritu de la Liturgia - Una Introducción.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PDF 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="portadas/book_002.jpg" alt="Portada 2" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">Dilexi Te</div>
+                        <a href="/biblioteca/pdf/Exhortación Apostólica Dilexi Te.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PDF 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="/biblioteca/portadas/book_003.jpg" alt="Portada 3" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">Desiderio Desideravi</div>
+                        <a href="/biblioteca/pdf/Desiderio Desideravi.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PDF 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="/biblioteca/portadas/book_004.jpg" alt="Portada 4" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">Sacrosantum Concilium</div>
+                        <a href="/biblioteca/pdf/Constitución Sacrosantum Concilium - Sobre la Sagrada Liturgia.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PDF 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="/biblioteca/portadas/book_005.jpg" alt="Portada 5" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">Instrucción General del Misal Romano</div>
+                        <a href="/biblioteca/pdf/Instrucción General del Misal Romano.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PDF 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="pdf-card">
+                    <img src="/biblioteca/portadas/book_006.jpg" alt="Portada 6" class="pdf-portada" onerror="this.src='https://via.placeholder.com/300x400?text=Portada+PDF'">
+                    <div class="pdf-body">
+                        <div class="pdf-titulo">Ordenación General de la Liturgia de las Horas</div>
+                        <a href="/biblioteca/pdf/Ordenación General de la Liturgia de las Horas.pdf" class="btn-leer"><i class="fas fa-book-open"></i> Leer PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h5>Católicos en Carmen</h5>
+                <p>Un sitio para compartir con ustedes todo lo relacionado con la iglesia en nuestra ciudad.</p>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contáctanos</a></li>
+                    <li><a href="#donativos">Donativos</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Contacto</h5>
+                <ul class="list-unstyled footer-contacto">
+                    <li><i class="fas fa-map-marker-alt me-2"></i>Cd. del Carmen, Campeche</li>
+                    <li><i class="fas fa-phone me-2"></i>938-181-4511</li>
+                    <li><i class="fas fa-envelope me-2"></i>cecarmen@gmail.com</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <h5>Síguenos</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Secciones ocultas para navegación -->
+<div id="sobre-nosotros" style="scroll-margin-top: 100px;"></div>
+<div id="contacto" style="scroll-margin-top: 100px;"></div>
+<div id="donativos" style="scroll-margin-top: 100px;"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript personalizado: biblioteca.js -->
+<script src="biblio.js"></script>
+</body>
+</html>

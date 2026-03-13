@@ -1,0 +1,561 @@
+/* biblioteca.css */
+/* Mantiene el mismo estilo, colores y diseño del index original,
+   con ajustes específicos para la biblioteca digital (tarjetas PDF, filtros, destacados) */
+
+:root {
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-primario: #2c3e50;
+    --color-secundario: #f1c40f;
+    --color-claro: #ecf0f1;
+    --color-borde: #bdc3c7;
+    --color-verde-liturgico: #27ae60;
+    --color-texto-gris: #666;
+    --color-blanco: #ffffff;
+    --color-morado: #9b59b6;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Navbar principal (exactamente igual) */
+.navbar-principal {
+    background-color: var(--color-blanco);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-principal .navbar-brand img {
+    max-height: 80px;
+    transition: all 0.3s ease;
+}
+
+.navbar-principal .nav-link {
+    color: var(--color-texto) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar-principal .nav-link:hover {
+    color: var(--color-secundario) !important;
+}
+
+.navbar-principal .nav-link.active {
+    color: var(--color-secundario) !important;
+}
+
+.navbar-principal .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secundario);
+    transition: width 0.3s;
+}
+
+.navbar-principal .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-principal .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Segundo Navbar - Información Litúrgica */
+.navbar-liturgico {
+    background-color: var(--color-claro);
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-top: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 110px;
+    z-index: 999;
+}
+
+.liturgico-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.circulo-liturgico {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    background-color: var(--color-verde-liturgico);
+    border: 1px solid var(--color-blanco);
+    box-shadow: 0 0 0 1px var(--color-borde);
+    vertical-align: middle;
+}
+
+/* Secciones generales */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--color-primario);
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Breadcrumb */
+.breadcrumb-pdf {
+    margin-bottom: 1.5rem;
+    color: var(--color-texto-gris);
+}
+
+.breadcrumb-pdf a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-pdf a:hover {
+    color: var(--color-secundario);
+}
+
+/* Header de biblioteca con filtros y buscador */
+.biblioteca-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+}
+
+.filtro-categoria {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge-categoria {
+    background-color: var(--color-claro);
+    color: var(--color-primario);
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.badge-categoria:hover,
+.badge-categoria.activo {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.buscador-pdf {
+    display: flex;
+    align-items: center;
+    background: var(--color-blanco);
+    border-radius: 50px;
+    padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    max-width: 300px;
+    width: 100%;
+}
+
+.buscador-pdf input {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0;
+    width: 100%;
+    outline: none;
+    color: var(--color-texto);
+}
+
+.buscador-pdf input::placeholder {
+    color: var(--color-texto-gris);
+    opacity: 0.7;
+}
+
+.buscador-pdf button {
+    background: var(--color-primario);
+    border: none;
+    color: white;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.buscador-pdf button:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Sección destacados */
+.seccion-destacados {
+    background-color: rgba(241, 196, 15, 0.05);
+    border-radius: 30px;
+    padding: 2rem 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.destacado-item {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.destacado-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.destacado-img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.destacado-titulo {
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--color-primario);
+    font-size: 1rem;
+}
+
+.destacado-meta {
+    font-size: 0.85rem;
+    color: var(--color-texto-gris);
+    margin-bottom: 5px;
+}
+
+/* Tarjetas PDF (similares a cartel-img-card pero más pequeñas) */
+.pdf-card {
+    background: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.pdf-portada {
+    width: 100%;
+    aspect-ratio: 1 / 1.3; /* proporción similar a libro/cartel */
+    object-fit: cover;
+    background-color: #f0f2f5;
+    border-bottom: 2px solid var(--color-claro);
+}
+
+.pdf-body {
+    padding: 1.2rem 1rem 1rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-titulo {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.pdf-autor {
+    color: var(--color-texto-gris);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.pdf-descripcion {
+    color: var(--color-texto-gris);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+/* Botón leer (similar al btn de cartel-contacto) */
+.btn-leer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-top: auto;
+    width: fit-content;
+}
+
+.btn-leer i {
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.btn-leer:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.btn-leer-sm {
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* Botón "Ver más artículos" (reutilizado del index) */
+.btn-articulos {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-articulos:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Colecciones destacadas (reutilizando .parroquia-card) */
+.parroquia-card {
+    background: var(--color-blanco);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.parroquia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.parroquia-icon {
+    font-size: 3rem;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+.parroquia-card h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+}
+
+.coleccion-desc {
+    color: var(--color-texto-gris);
+    margin-bottom: 1rem;
+}
+
+.parroquia-card .btn {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.parroquia-card .btn:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Footer (exactamente igual) */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 60px 0 30px;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.8);
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--color-secundario);
+}
+
+.footer-contacto li {
+    color: rgba(255,255,255,0.8);
+    list-style: none;
+}
+
+.footer-contacto i {
+    color: var(--color-secundario);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: var(--color-blanco);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .navbar-brand img {
+        max-height: 40px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .liturgico-info {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .biblioteca-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .buscador-pdf {
+        max-width: 100%;
+    }
+    
+    .seccion-destacados {
+        padding: 1.5rem 1rem;
+    }
+    
+    .destacado-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .destacado-img {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filtro-categoria {
+        justify-content: center;
+    }
+    
+    .pdf-titulo {
+        font-size: 1rem;
+    }
+    
+    .btn-leer {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+/* Ajuste para el sticky top combinado */
+.sticky-top {
+    top: 0;
+    z-index: 1020;
+}
+
+.navbar-liturgico.sticky-top {
+    top: 106px; /* Ajuste para que quede debajo del navbar principal */
+}
+
+@media (max-width: 991px) {
+    .navbar-liturgico.sticky-top {
+        top: 76px; /* Ajuste para móvil cuando el navbar colapsa */
+    }
+}

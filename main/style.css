@@ -1,0 +1,686 @@
+:root {
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-primario: #2c3e50;
+    --color-secundario: #f1c40f;
+    --color-claro: #ecf0f1;
+    --color-borde: #bdc3c7;
+    --color-verde-liturgico: #27ae60;
+    --color-texto-gris: #666;
+    --color-blanco: #ffffff;
+    --color-morado: #9b59b6;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Navbar Principal */
+.navbar-principal {
+    background-color: var(--color-blanco);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-principal .navbar-brand img {
+    max-height: 80px;
+    transition: all 0.3s ease;
+}
+
+.navbar-principal .nav-link {
+    color: var(--color-texto) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar-principal .nav-link:hover {
+    color: var(--color-secundario) !important;
+}
+
+.navbar-principal .nav-link.active {
+    color: var(--color-secundario) !important;
+}
+
+.navbar-principal .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secundario);
+    transition: width 0.3s;
+}
+
+.navbar-principal .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-principal .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: none;
+}
+
+/* Segundo Navbar */
+.navbar-liturgico {
+    background-color: var(--color-claro);
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-top: 2px solid var(--color-secundario);
+
+    position: sticky;
+    top: 110px;
+    z-index: 999;
+}
+
+.liturgico-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.circulo-liturgico {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    background-color: var(--color-verde-liturgico);
+    border: 1px solid var(--color-blanco);
+    box-shadow: 0 0 0 1px var(--color-borde);
+    vertical-align: middle;
+}
+
+/* Noticia Principal */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/noticia_principal.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-blanco);
+    padding: 150px 0;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content .badge {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: auto;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: auto;
+}
+
+.btn-outline-light {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: var(--color-blanco);
+    
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--color-primario);
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Artículos Formativos */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+    text-align: center;
+}
+
+.card-text {
+    color: var(--color-texto-gris);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.card .btn-link {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 25px;
+    margin-top: 10px;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.card .btn-link:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+
+.btn-articulos{
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-articulos:hover{
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Calendario */
+.calendario-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.calendario-item:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.calendario-fecha {
+    min-width: 100px;
+    text-align: center;
+    background: var(--color-morado);
+    color: var(--color-blanco);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.calendario-fecha .dia {
+    font-size: 1.8rem;
+    line-height: 1;
+    display: block;
+}
+
+.calendario-fecha .mes {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.calendario-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-primario);
+}
+
+.calendario-info p {
+    color: var(--color-texto-gris);
+    margin: 0;
+}
+
+/* Retiros y Encuentros */
+.cartel-img-card{
+    background: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.cartel-img-card:hover{
+    transform: scale(1.02);
+}
+
+.cartel-img-card img{
+    width: 100%;
+    aspect-ratio: 8.5/11;
+    object-fit: cover;
+}
+
+.cartel-contacto{
+    padding: 18px;
+    text-align: center;
+}
+
+.cartel-contacto .btn{
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cartel-contacto .btn:hover{
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Parroquias */
+.parroquia-card {
+    background: var(--color-blanco);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.parroquia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.parroquia-icon {
+    font-size: 3rem;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+.parroquia-card h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+}
+
+.parroquia-card .btn {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.parroquia-card .btn:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* Videos */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.link-icm{
+    text-decoration: none;
+}
+
+
+/* Recursos descargables */
+.recurso-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.recurso-card {
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.recurso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.recurso-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+}
+
+.recurso-card h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.recurso-card p {
+    color: var(--color-texto-gris);
+    margin: 0;
+}
+
+.recurso-card:hover .recurso-icon,
+.recurso-card:hover p {
+    color: var(--color-primario);
+}
+
+/* Widget Vatican News */
+.vatican-news-widget {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 60px 0;
+}
+
+.vatican-news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+}
+
+/* Ajustes responsivos para el widget */
+@media (max-width: 768px) {
+    .vatican-news-container {
+        padding: 10px;
+    }
+    
+    vaticannews-widget {
+        font-size: 16px !important; 
+    }
+}
+
+.vatican-news-widget .section-title {
+    margin-bottom: 30px;
+}
+
+vaticannews-widget {
+    --vn-primary-color: var(--color-primario);
+    --vn-secondary-color: var(--color-secundario);
+}
+
+/* Canales Oficiales */
+.canales-oficiales {
+    background: --color-fondo;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.carrusel-logos {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.carrusel-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+    gap: 50px;
+    align-items: center;
+}
+
+.carrusel-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-link {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.logo-link:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.logo-img {
+    max-width: 100%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.logo-link:hover .logo-img {
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 25px)); /* Ajustado por el gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-link {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo-img {
+        max-height: 80px;
+    }
+    
+    .carrusel-track {
+        animation: scroll 30s linear infinite;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-link {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .logo-img {
+        max-height: 60px;
+    }
+    
+    .carrusel-track {
+        animation: scroll 25s linear infinite;
+        gap: 30px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 60px 0 30px;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.8);
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--color-secundario);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: var(--color-blanco);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration-line: none;
+}
+
+.social-icons a:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+footer hr {
+    border-color: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .navbar-brand img {
+        max-height: 40px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .calendario-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .calendario-fecha {
+        margin: 0 auto;
+    }
+    
+    .liturgico-info {
+        justify-content: center;
+        gap: 15px;
+    }
+}
